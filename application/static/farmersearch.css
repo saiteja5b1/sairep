@@ -1,0 +1,40 @@
+#body{
+    background-color: burlywood;
+}
+h2{
+    color: black;
+}
+option,label{
+    color:black;
+}
+.mainsearch{
+    height: 520px;
+    width:700px;
+    -moz-box-shadow: 0 0 5px 5px #888;
+    -webkit-box-shadow:0 0 5px 5px #888;
+    box-shadow: 0 0 7px 5px white;
+}
+.mainsearch{
+    margin-left: 16em;
+    margin-top: 2.5em;
+}
+.a,.c,.d{
+    margin-top:1.5em;
+    margin-left: 5em;
+}
+.madya,.madhya1,.madhya2,.madhya3{
+    margin-top: 0.5em;
+    margin-left: 8em;
+}
+.b,.e,.f{
+    margin-top:2em;
+    margin-left: 6.5em;
+}
+#filter{
+    margin-left: 40em;
+    margin-top:4em;
+}
+/* .madhya3{
+    margin-top:0.5em;
+    margin-left:11em;
+} */

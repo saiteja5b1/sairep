@@ -1,0 +1,167 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="{{url_for('static',filename='arable.css')}}">
+        <meta charset="utf-8">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+        <meta http-equiv="Cache-Control" control="no-cache, no-store, must-revalidate" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Expires" content="0" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </head>
+    <body id="body">
+        <div class="form-group" id="asses">
+            <legend>Arable Assests details</legend>
+                <div class="main1" id="main1">
+                    <div class="taste">
+                        <select id="taste_of_crop">
+                            <option value="none" selected>select crop type</option>
+                            <option value="Monoculture" id="mon">Monoculture</option>
+                            <option value="Polyculture" id="pol">Polyculture</option>
+                        </select>
+                    </div>
+                            <div class="for_arable" id="for_arable">
+                                        <div class="container-b">
+                                            <!-- <label for="place">place of land</label> -->
+                                            <input type="text" placeholder="Enter Place of Land" name="place" id='place'>
+                                    <!-- <input type="number" placeholder="Enter the Length" name="length">
+                                    <input type="number" placeholder="Enter the Width" name="width"> -->
+                                    <!-- <label for="acres">acres</label> -->
+                                            <input class="col-xs-offset-1" type="number" placeholder="enter acres" name="acres" id='acres'>
+                                        </div>
+                                        <div class="container-d">
+                                            <!-- <label for="own">Select Your Identity</label> -->
+                                                <select id="own">
+                                                <option value="" selected>select identity</option>
+                                                <option value="Own_Land">Own Land</option>
+                                                <option value="Lease_Land">Lease Land</option>
+                                            </select>
+                                        </div>
+                        <div class="container-f">
+                            <div id="Mono">
+                                <div class="arable" id="ara_ble">
+                                    <label for="kind_of_arable">Select Your Kind</label>
+                                    <div class="container-a">
+                                        <select id="kind_of_arable">
+                                            <option value="" selected>__Select__</option>
+                                            <option value="cash">Cash</option>
+                                            <option value="food">Food</option>
+                                            <option value="horticulture">Horticulture</option>
+                                            <option value="plantation">Plantation</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="crop_name">
+                                <label>Crop Name</label>
+                                <!-- <input type="text"> -->
+                                <select name="crop_select"  id="crop_select">
+                                    <option value="" selected>-- Select --</option>
+                                </select>
+                            </div>
+                            <script>
+                $("select[id='kind_of_arable']").focusout(function(){
+                selectedArable=$(this).val();
+                // $(#mandals).empty();     
+                
+                var s={{datalist|tojson}};
+                console.log(s[selectedArable].length)
+                sel = document.getElementById('crop_select');
+                var child = sel.lastElementChild;  
+                while (child) { 
+                    sel.removeChild(child); 
+                    child = sel.lastElementChild; 
+                } 
+                for (i = 0; i < s[selectedArable].length; i++) {
+                opt = document.createElement('option');
+                opt.value =s[selectedArable][i];
+                opt.innerHTML=opt.value;
+                sel.appendChild(opt);
+                }
+            });
+            </script> 
+                            </div>
+                            <div id="Poly">
+                                <label for="poly_crops" id="poly_crops">Select your Choices</label>
+                                    <div id="diff_crops">
+                                                <!-- <div class="container-g"> -->
+                                                    <input type="checkbox" onclick="show_rest1(this)">
+                                                    <label for="option1_ara" id="kinds_of_1">Cash</label>
+                                                
+                                                    <class id="opt-a">
+                                                        <!-- <input type="text" placeholder="Enter Cash Type"> -->
+                                                        <select name="dis_select" id="dis-select" onchange="changemand(this);">
+                                                            <option value="" selected>-- Select --</option>
+                                                            {% for i in datalist['cash'] %}
+                                                          <option value="{{i}}">{{i}}</option>
+                                                          {%endfor%}
+                                                        </select>
+                                                    
+                                                        <input class="col-xs-offset-1" type="number" placeholder="Enter Cash in acres">
+                                                        
+                                                    </class>
+                                                    <br>
+                                                    <input type="checkbox" id="kinds_of_2" onclick="show_rest2(this)">
+                                                    <label for="option2_ara">Food</label>
+                                
+                                                    <class id="opt-b">
+                                                       <!-- <input type="text" placeholder="Enter Food Type"> -->
+                                                       <select name="dis_select" id="dis-select" onchange="changemand(this);">
+                                                        <option value="" selected>-- Select --</option>
+                                                        {% for i in datalist['food'] %}
+                                                      <option value="{{i}}">{{i}}</option>
+                                                      {%endfor%}
+                                                    </select>
+                                                        <input class="col-xs-offset-1" type="number" placeholder="Enter Food in acres">
+                                
+                                                    </class>
+                                                    <br>
+                                                    <input type="checkbox" id="kinds_of_3" onclick="show_rest3(this)">
+                                                    <label for="option3_ara">Horticulture</label>
+                                        
+                                                    <class id="opt-c">
+                                                        <!-- <input type="text" placeholder="Enter Horticulture Type"> -->
+                                                        <select name="dis_select" id="dis-select" onchange="changemand(this);">
+                                                            <option value="" selected>-- Select --</option>
+                                                            {% for i in datalist['horticulture'] %}
+                                                          <option value="{{i}}">{{i}}</option>
+                                                          {%endfor%}
+                                                        </select>
+                                                        <input class="col-xs-offset-1" type="number" placeholder="Enter Horticulture in acres">
+                                                        
+                                                    </class>
+                                                    <br>
+                                                    <input type="checkbox" id="kinds_of_4" onclick="show_rest4(this)">
+                                                    <label for="option4_ara">Plantation</label>
+                                            
+                                                    <class id="opt-d">
+                                                        <!-- <input type="text" placeholder="Enter Plantationype"> -->
+                                                        <select name="dis_select" id="dis-select" onchange="changemand(this);">
+                                                            <option value="" selected>-- Select --</option>
+                                                            {% for i in datalist['plantation'] %}
+                                                          <option value="{{i}}">{{i}}</option>
+                                                          {%endfor%}
+                                                        </select>
+                                                        <input class="col-xs-offset-1" type="number" placeholder="Enter Plantation in acres">
+                                                    </class>
+                                        </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+    </body>
+    <script src="{{url_for('static',filename='js/arwable.js')}}"></script>
+    <script src="{{url_for('static',filename='js/populsate_next1.js')}}"></script>
+    <!-- <script src="js/main.js"></script>
+    <script src="js/jsc1.js"></script>
+    <script src="js/mono_poly.js"></script>
+    <script src="js/populate_next.js"></script>
+    <script src="js/popullate_next0.js"></script>
+    <script src="js/populate_next1.js"></script>
+    <script src="js/fish_land.js"></script>
+    <script src="js/for_arable_pop.js"></script>
+    <script src="js/diapoulfis.js"></script> -->
+</html>

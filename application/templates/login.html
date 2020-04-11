@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{{url_for('static',filename='login.css')}}">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        <title>
+            Login form
+        </title>
+    </head>
+    <body>  
+    <div class="main">
+        <div class="useless">      
+            <form >
+                <br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <div class="container">
+                    <label for="email"></label><b>Email</b></label>
+                    <input type="text" placeholder="Enter Email or phone number" name="email" required>
+                    <br/>
+
+                    <label for="psw" id='pass'><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+                    <br />
+                    
+                    <br />
+                    <!-- <div class="checkbox">
+                        <label><input type="checkbox"> Remember me</label>
+                    </div> -->               
+                </div>
+                    
+                <div class="container1">
+                    <ul >
+                        <li style="float:left">
+                            <div class="loginbtn">
+                                <button type="button" class="btn btn-primary">Login</button>
+                            </div>
+                        </li>
+                        <li style="float:left">
+                            <div class="col-sm-3" id="one">
+                            <a href="{{url_for('register')}}" class="new-user"><button type="button" class="btn btn-primary ">Register</button></a>
+                            </div>
+                        </li>
+                    <br/><br/><br/><br/>
+                    
+                <span class="psw">Forgot <a href="#">password?</a></span>
+                </div>
+            </form>
+        </div>
+    </div>
+    </body>
+</html>

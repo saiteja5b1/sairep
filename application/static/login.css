@@ -1,0 +1,97 @@
+body {
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,4,2,0.4)), url("heartful_crop.jpg");
+    background-position: center;
+    background-size: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+input[type=text] {
+  /* padding: 7px 6px;
+  margin: 0 0 25px 57px;
+  width: 30%;
+  display: inline-block;
+  border: 1px solid rgb(243, 218, 218);
+  box-sizing: border-box; */
+  height:2.2rem;
+  width:13rem;
+  border-radius:12px;
+  position: relative;
+  color: black;
+  margin-left:6em;
+}
+.useless{
+  border:3px solid goldenrod;
+  box-shadow: 0 0 0 1.9px yellowgreen;
+  height:80%;
+  width:40%;
+}
+input[type=password]{
+  /* padding: 7px 6px;
+  margin: 0 0 15px 30px;
+  width: 30%;
+  display: inline-block;
+  border: 1px solid rgb(243, 235, 235);
+  box-sizing: border-box; */
+  height:2.2rem;
+  width:13rem;
+  color: black;
+  border-radius:12px;
+  position: relative;
+}  
+#pass
+{
+  position: relative;
+  bottom: 2em;
+}
+button {
+    position: absolute;
+  cursor: pointer;
+  width: 20%;
+}
+button:hover {
+  opacity: 0.8;
+}
+/* .main{
+  max-width: auto;
+  max-height: auto;
+} */
+.container {
+  color:rgb(202, 202, 223);
+  text-align: right;
+  width: 400px;
+}
+.container input{
+  margin-top:2em;
+}
+.container-1{
+  color:rgb(202, 202, 223);
+  text-align: right;
+  width: 800px;
+}
+#a{
+  height:10em;
+  width:10px;
+}
+/* span.psw {
+  float: left;
+  padding-top: 10px;
+} */
+
+/* @media screen and (max-width: 300px) {
+  span.psw {
+     display:block;
+     text-decoration-color:rgb(157, 170, 185);
+     float: none;
+  } */
+  .cancelbtn {
+     width: 30%;
+  }
+.loginbtn {
+    color:rgb(198, 214, 195);
+  width: 3%;
+  margin-left: 10rem;;
+  background-color: #b18989;
+}
+.new-user{
+  margin-left:20em;
+}
+

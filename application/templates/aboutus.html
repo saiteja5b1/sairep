@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta char set="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="{{url_for('static',filename='aboutus.css')}}">
+        <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+    </head>
+    <body>
+        <h2>Agro-Backing</h2>
+        <div class='para'>
+        <p>As part of our academic project we thoughgt of creating something that would be helpful for farmers in and around our state.<br/><br/> Hence we come up with the idea of "Agro Backing".<br/><br/> As we see many farmers commit suicides due to lack of money, we want to reduce these scenarios and help farmers..</p>
+        <p>We are working for farmers and their future enhancement..</p>
+        <p>We started this website to help farmers..</p>
+    </div>
+        <div class="slider">
+            <div class="slide-image">
+                    <div class="img-container">
+                        <a href="{{url_for('static',filename='ab6.jpg')}}">
+                            <img class="img-resize img-rounded" src="{{url_for('static',filename='ab6.jpg')}}" alt="" style="width:60%">
+                            <div class="caption">
+                                <p>Farmers struggling to install borewells in their lands...</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="img-container">
+                        <a href="{{url_for('static',filename='ab5.jpg')}}">
+                            <img class="img-resize img-rounded" src="{{url_for('static',filename='ab5.jpg')}}" alt="" style="width:60%">
+                            <div class="caption">
+                                <p>Lack of money which led them to commit suicides...</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="img-container">
+                        <a href="{{url_for('static',filename='ab1.jpg')}}">
+                            <img class="img-resize img-rounded" src="{{url_for('static',filename='ab1.jpg')}}" alt="" style="width:60%">
+                            <div class="caption">
+                                <p>Investors helping out to enhance agriculture...</p>
+                            </div>
+                        </a>
+                    </div>
+                    
+            </div>
+        </div>
+    </body>
+</html>

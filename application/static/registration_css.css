@@ -1,0 +1,96 @@
+#body{
+    background: linear-gradient(rgba(0, 1, 7, 0.7),rgba(0,0,0,0.5)), url("handfarm.jpg");
+    background-size: 120vmax;
+}
+.genn{
+    height: 380px;
+    -moz-box-shadow: 0 0 5px 5px #888;
+    -webkit-box-shadow:0 0 5px 5px #888;
+    box-shadow: 0 0 10px 8px #617c58;
+}
+h1{
+    /* color:#99c68e; */
+    color:#667c26;
+}
+.general{
+    margin-right: 20%;
+    margin-left:20%;
+}
+label{
+    color:#ffffcc;
+    text-align: center;
+}
+legend{
+    color:#ffffcc;
+}
+.container-4-content{
+    display:none;
+    position:absolute;
+    background-color:black;
+    min-width:160px;
+    box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index:1;
+}
+.container-4-content select:hover{
+    background-color:black;
+}
+.container-4:hover{
+    display:block;
+}
+.genn{
+    margin-top:5%;
+    margin-left:0%;
+    /* margin-bottom:5%; */
+    margin-right: 14%;
+}
+.container-0{
+    text-align: center;
+}
+.container-1 input{
+    height:2.5em;
+    width:13em;
+    border-radius:12px;
+    margin-top: 3.5em;
+    margin-left:4em; 
+}
+input:hover,textarea:hover{
+    background-color:#ffffcc;
+    border:2.5px solid #f3e5ab;
+}
+input:focus,textarea:focus,select:focus{
+    outline:none;
+}
+.container-2 textarea{
+    height:4em;
+    width:18em;
+    border-radius:12px;
+    margin-top:4em;
+}
+#cont-1{
+    margin-left:25em;
+}
+#cont-1 select{
+    /* padding-left:1.3em; */
+    height:2.5em;
+    width:13em;
+    border-radius:12px;
+    margin-top:3.0em;
+}
+.container-4 select{
+    margin-left:4em;
+}
+/* .container-3 input{
+    margin-right:4em;
+} */
+.container-5 select{
+    margin-left:4em;
+}
+.container-6 select{
+    height:2em;
+    width:10em;
+    border-radius:12px;
+}
+.container-6{
+    margin-top:3em;
+    margin-left:10em;
+}

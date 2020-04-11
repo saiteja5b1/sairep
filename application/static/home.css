@@ -1,0 +1,146 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    background-color: #eee;
+}
+#footer{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+  padding-top: 1rem;
+  background-color: rgba(0,0,0);
+  min-height: 100px;
+}
+#footer li{
+  list-style-type: none;
+}
+#footer li > a{
+
+  color: black;
+  list-style-type: none;
+  padding: 5px 20px;
+  font-family: poppins;
+  font-size: 14px;
+}
+.wrapper
+{
+    width: 100%;
+    padding-right: 100px;
+    margin:auto;
+    position: fixed;
+    top: 0em;
+}
+
+header
+{
+    background: linear-gradient(rgba(0, 7, 7, 0.6),rgba(0,0,0,0.4)), url("handfarm.jpg");
+    height: 100vh;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    -webkit-background-size:cover;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+.nav-area
+{
+    float: right;
+    list-style: none;
+    margin-top: 40px;
+}
+.nav-area li{
+    display: inline-block;
+  }
+div.dropdown-menu{
+  background-color: rgba(207, 104, 19, 0.733);
+}
+#dropdown-list{
+  position: relative;
+  display:inline-block;
+}
+.nav-area li a{
+  
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 20px;
+    font-family: poppins;
+    font-size: 14px;
+}
+.nav-area li a:hover{
+    background: greenyellow;
+    color:blue;
+}
+.logo{
+  padding: 10px 0px 0px 40px;
+}
+.logo img{
+    width: 100px;
+    float: left;
+    height: auto;
+    border-radius: 3rem;
+}
+.welcome-text{
+    position: absolute;
+    width: 600px;
+    height: 300px;
+    margin: 20% 30%;
+    text-align: center;
+  
+    
+    
+}
+.welcome-text h1{
+     text-align: center;
+    color: rgb(214, 163, 23);
+    text-transform: uppercase;
+    font-size: 60px;
+}
+
+ /
+
+
+/* slide show css */
+.slider{
+  overflow: hidden;
+  scroll-behavior: smooth;
+  position: relative;
+  height: 400px;
+  width: 1200px;
+}
+/* .slide-image{
+
+  width: auto;
+  height: 100px;
+  margin-left: 0rem;
+  position: relative;
+  -webkit-animation-name: slide_animation;
+  -webkit-animation-duration: 15s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-play-state: running;
+  -webkit-animation-timing-function: cubic-bezier(0.75, 0.90, 0.17, 1);
+} */
+.img-container{
+  width: auto;
+  position: relative;
+  max-width: 100%;
+  float: right;
+}
+.img-resize{
+  height: 400px;
+  width: 450px;
+  padding-right: 1rem;
+ }
+.img-container :hover{
+  opacity: 0.8;
+}
+@-webkit-keyframes slide_animation{
+  0% {left: -100px;}
+  25% {left: 800px;}
+  50% {right: 800px;}
+  75% {right: 400px;}
+   100% {right: 1000px;}
+}   

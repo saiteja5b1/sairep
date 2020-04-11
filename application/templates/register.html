@@ -1,0 +1,144 @@
+<html>
+    <head>
+        <link  rel="stylesheet" href="{{url_for('static',filename='registration_css.css')}}">
+        <title>Registration Site</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="project/js/jquery-validation/dist/jquery.validate.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script type="text/javascript">
+            function goToNewPage(){
+                var url=document.getElementById('kind_of_farming').value;
+                if(url!='none'){
+                    window.location=url;
+                }
+            }
+        </script>
+        <script type="text/javascript">
+            function valid(){
+                if(document.registration.Name.value==""){
+        alert("please enter your name");
+        document.registration.Name.focus();
+        return false;
+    }
+    if(document.registration.Age.value==""){
+        alert("please enter age");
+        document.registration.Age.focus();
+        return false;
+    }
+    if(document.registration.PhnNo.value.length!=10){
+        alert("please enter valid phone number");
+        document.registration.PhnNo.focus();
+        return false;
+    }
+    if(document.registration.Address.value==""){
+        alert("please enter valid address");
+        document.registration.Address.focus();
+        return false;
+    }
+            }
+        </script>
+    </head>
+    <body id="body">
+              <div class="container-0">
+            <h1>Registration Form</h1>
+        </div>  
+        <!-- <p align="center">
+            <iframe id="iframe" runat="server" src="https://meebhoomi.ap.gov.in/SearchAdangal.aspx" width="100%" height="500px"></iframe>
+        </p>
+        <input type="button" onclick="getFrameContents();" value="Get Contents" />      -->
+        <!-- <div class="Main">
+            <!-- <form action="main.php" method="POST"> -->
+            <div class="general">
+                    <legend><h2>Personal Details</h2></legend>
+                <div class="genn">
+                        <form action="" name="registration" onsubmit="return(validate());">
+                                <div style="float:left;" class="container-1">
+                                    <input type="text" placeholder="Enter Full Name" name="Name"/>
+                                    <br />
+                                    <input type="number" placeholder="Enter Your Age" name="Age"/>
+                                    <br />
+                                    <input type="number" placeholder="Enter Your Phone Number" name="PhnNo">
+                                </div>
+                                <div id="cont-1">
+                                    <div class="container-2">
+                                        <!-- <h4>Address</h4> -->
+                                        <textarea placeholder="Enter Your Address" name="Address"></textarea>
+                                    </div>
+                                    <div class="container-3">
+                                                <div class="container-4">
+                                                    <!-- <label for="diss">Select yout District</label> -->
+                                                        <select name="District" id="dis-select" onchange="changemand(this);">
+                                                            <option value="" selected>-- Select your district --</option>
+                                                            {% for i in districts %}
+                                                          <option value="{{i}}">{{i}}</option>
+                                                          {%endfor%}
+                                                        </select>
+                                                </div>
+                                                <div class="container-5">
+                                                    <!-- <label for="mann">Select yout Mandal</label> -->
+                                                        <select name="Mandal"  id="man_select">
+                                                            <option value="" selected>-- Select your mandal --</option>
+                                                        </select>
+                                                
+                                                <script>
+                                                    $("select[id='dis-select']").change(function(){
+                                                    selectedDistrict=$(this).val();
+                                                    // $(#mandals).empty();     
+                                                    
+                                                    var s={{datalist|tojson}};
+                                                    console.log(s[selectedDistrict].length)
+                                                    sel = document.getElementById('man_select');
+                                                    var child = sel.lastElementChild;  
+                                                    while (child) { 
+                                                        sel.removeChild(child); 
+                                                        child = sel.lastElementChild; 
+                                                    } 
+                                                    for (i = 0; i < s[selectedDistrict].length; i++) {
+                                                    opt = document.createElement('option');
+                                                    opt.value =s[selectedDistrict][i];
+                                                    opt.innerHTML=opt.value;
+                                                    sel.appendChild(opt);
+                                                    }
+                                                });
+                                                // </script> 
+                                                <!-- // <button class="reset">reset</button>
+                                                // <script>
+                                                //     $(".reset").onclick(){
+                                                //         document.getElementById('dis-select').reset();
+                                                //     }
+                                                // </script> -->
+                                                </div>
+                                    </div>
+                                </div>
+                                <div class="container-6">
+                                    <label for="kind_of_farming">Choose Your Option</label>
+                                    <!-- <form action="main.php" method="POST"> -->
+                                    <!-- <form> -->
+                                        <select id="kind_of_farming" name="kind_of_farming" accesskey="target">
+                                                    <option value="none" selected>__None__</option>
+                                                    <option value="{{url_for('arable')}}">Arable</option>
+                                                    <option value="temperary2.html" disabled>Pastoral</option>
+                                                    <option value="temperary1.html" disabled>Mixed</option>
+                                        </select>
+                                        <input class="col-xs-offset" type="button" value="Go" onclick="validate() " placeholder="Go"/>
+                                </div>
+                            
+                                        <!-- <input type="submit">-->
+                                    <!-- </form> -->
+                                    <!-- <input type="submit" value="submit" /> -->
+                    
+                        <!-- </form> -->
+                </div>
+            </div>
+        </div> -->
+    </body>
+    <script src="{{url_for('static',filename='js/index_validate.js')}}"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</html>

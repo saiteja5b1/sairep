@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static',filename='pastoral.css')}}">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </head>
+    <body id="body">
+        <div class="form-group" id="main2">
+            <legend>Pastoral Assests Details</legend>
+            <div class="pastoral" id="past_oral">
+                <div class="container-a">
+                    <label for="kind_of_pastoral">Select Your Kind</label>
+                        <div class="container-1">
+                            <select id="kind_of_pastoral">
+                                <option value="none" selected>__None__</option>
+                                <option value="Dairy">Dairy</option>
+                                <option value="Poultry">Poultry</option>
+                                <option value="Fish">Fish</option>
+                            </select>
+                        </div>
+                </div>
+                <div id="for_pastoral_dairy">
+                    <input type="text" placeholder="How many do you have" name="place1">
+                    <label for="feed_land">Do you have personal crop for feeding</label>
+                    <select type="feed_land">
+                        <option value="" selected>__None</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                    <input type="number" placeholder="Enter the Width" name="width">
+                    <input type="number" placeholder="How Many Acres Do You Have" name="acres">
+                    <label for="own1">Select Your Identity</label>
+                        <select id="own1">
+                            <option value="" selected>__None__</option>
+                            <option value="Own_Land">Own Land</option>
+                            <option value="Lease_Land">Lease Land</option>
+                        </select>
+                </div>
+                <div id="for_pastoral_poultry">
+                    <input type="text" placeholder="How many do you have" name="place1">
+                    <label for="meat_egg">Do you have meat poultry</label>
+                    <select type="meat" id="meat">
+                        <option value="" selected>__None__</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                    <label for="meat_egg">Do you have egg poultry</label>
+                    <select type="egg" id="egg">
+                        <option value="" selected>__None__</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                    <input type="text" id="meat_land" placeholder="Enter the acres for meat">
+                    <input type="text" id="egg_land" placeholder="Enter the acres for egg">
+                </div>
+                <div id="for_pastoral_fish">
+                        <label for="fish_lands">How many do you have</label>
+                        <select id="fish_lands">
+                            <option value="" selected>__Select__</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                        <div id="inp"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="{{ url_for('static',filename='js/diapoulfis.js')}}"></script>
+    <script src="{{ url_for('static',filename='js/fish_land.js') }}"></script>
+</html>

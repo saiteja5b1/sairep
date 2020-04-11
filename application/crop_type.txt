@@ -1,0 +1,69 @@
+{
+"Arhar/Tur":"Cash",
+"Bajra":"Food",
+"Castor Seed":"Food",
+"Cotton":"Cash",
+"Dry Chillies":"Cash",
+"Groundnut":"Cash",
+"Horse Gram":"Food",
+"Jowar":"Food",
+"Korra":"Food",
+"Maize":"Food",
+"Moong(Green Gram)":"Food",
+"Ragi":"Food",
+"Rice":"Food",
+"Sugercane":"Cash",
+"Sunflower":"Cash",
+"Tobacco":"Cash",
+"Gram":"Food",
+"Wheat":"Food",
+"Masoor":"Food",
+"Sesamum":"Cash",
+Urad:Food
+Linseed:Food
+"Safflower":"Cash",
+"Onion":"Horticulture",
+Samai:Food
+"Small millets":"Food",
+"Arecanut":"Food",
+"Banana":"Horticulture",
+"Coconut":"Plantation",
+Coriander:Plantation
+"Potato":"Horticulture",
+Sweet Potato:Horticulture
+"Turmeric":"Food",
+"Soyabean":Horticulture
+"Beans & Mutter(Vegetable)":"Horticulture",
+"Bhindi":"Horticulture",
+Brinjal:Horticulture
+"Citrus Fruit":"Horticulture"
+"Cucumber":"Horticulture",
+"Grapes":"Horticulture",
+"Mango":"Horticulture",
+Orange:Horticulture
+Papaya:Horticulture
+"Pome Fruit":"Horticulture",
+"Toamto":"Horticulture",
+Bottle Gourd:Horticulture
+Cabbage:Horticulture
+Cashewnut:Food
+Cowpea(Lobia):Horticulture
+"Ginger":"Horticulture",
+"Garlic":"Food",
+"Lemon":"Horticulture",
+"Mesta":"Cash",
+"Niger seed":Cash
+"Other Rabi Pulses":"Cash",
+"other fibres":"Cash",
+"Other Fresh Fruits":"Horticulture",
+"Other Khariff pulses":"Cash",
+"other misc. pulses":"Cash",
+"other oilseeds":"Cash",
+"Other Vegetables":"Horticulture",
+"Peas (vegetable)":"Horticulture",
+"Pome Granet":"Horticulture",
+"Rapeseed&Mustard":"Cash",
+"Sannhamp":"Plantation",
+"Sapota":"Horticulture",
+"Tapioca":"Food",
+}

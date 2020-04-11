@@ -1,0 +1,67 @@
+arhar:cash
+bajra:food
+castor seed:food
+cotton:cash
+dry chillies:cash
+groundnut:cash
+horse gram:food
+jowar:food
+korra:food
+maize:food
+moong:food
+ragi:food
+rice:food
+sugercane:cash
+sunflower:cash
+tobacco:cash
+gram:food
+wheat:food
+masoor:food
+sesamum:cash
+urad:food
+linseed:food
+safflower:cash
+onion:horticulture
+samai:food
+small millets:food
+arecanut:food
+banana:horticulture
+coconut:plantation
+coriander:plantation
+potato:horticulture
+sweet potato:horticulture
+turmeric:food
+soyabean:horticulture
+beans&mutter:horticulture
+bhindi:horticulture
+brinjal:horticulture
+citrusFruit:horticulture
+cucumber:horticulture
+grapes:horticulture
+mango:horticulture
+orange:horticulture
+papaya:horticulture
+pome fruit:horticulture
+toamto:horticulture
+bottle gourd:horticulture
+cabbage:horticulture
+cashewnut:food
+cowpea:horticulture
+dry ginger:food
+garlic:food
+lemon:horticulture
+mesta:cash
+niger seed:cash
+other rabi pulses:cash
+other fibres:cash
+other fresh fruits:horticulture
+other kariff pulses:cash
+other misc pulses:cash
+other oil seeds:cash
+other vegetables:horticulture
+peas:horticulture
+pome granet:horticulture
+rapeseed&mustard:cash
+sannhamp:plantation
+sapota:horticulture
+tapioca:food

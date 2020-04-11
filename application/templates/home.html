@@ -1,0 +1,112 @@
+{% extends 'template.html' %}
+
+{% block style %}
+    <link rel="stylesheet" href="{{url_for('static',filename='home.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='footer.css')}}">
+{% endblock style %}    
+
+{% block title %}
+    HomePage
+{% endblock title %}
+
+{% block header %}
+<header>
+    <div class="wrapper">
+        <div class="logo">
+          <img src="{{url_for('static',filename='log.jpg')}}" class="img-circle" alt="logo" usemap="#logomap">
+          <map name="logomap">
+              <area shape="circle" coords="10,10,3" href="{{url_for('home')}}" alt="logo">
+          </map>
+        </div>
+        <ul class="nav-area" id="sai-teja">
+            <li><a class="nav-item active"  href="{{url_for('home')}}">Home</a></li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button">Profile</a>
+              <div class="dropdown-list" id="dropdown-list">
+                <a class="dropdown-item" href="{{url_for('login')}}">login</a>
+                <a class="dropdown-item" href="{{url_for('viewProfile')}}">view</a>
+              </div>
+            </li>
+            
+            <li><a class="nav-item"href="{{url_for('services')}}">Services</a></li>
+            <li><a class="nav-item" href="{{url_for('aboutus')}}">About us</a></li>
+            <li><a class="nav-item" href="{{url_for('contactus')}}">Contact us</a></li>
+        </ul>
+        <script>
+      // Adding active class to the current button (highlighting)
+      var header = document.getElementById("sai-teja");
+      var btns = header.getElementsByClassName("nav-item");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+        });
+      }
+      </script>
+    </div>
+    <div class="welcome-text">
+        <h1>We  are  working  for  farmers</h1>
+    </div>
+</header>
+{% endblock header %}
+
+{% block footer %}
+    <footer>
+        <div class="contact">
+            <a href="cont.html" title="Contact Us" class="redBgLink">Contact Us</a>
+        </div>
+
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                        <div class="col-md-3 col-sm-6 col-xs-12 segment-one">
+                            <h2>Agro Backing</h2>
+                            <p>Agro Backing is for farmers<br/> struggling to cope up with <br/> situations and in need....!</p>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-12 segment-two">
+                            <h2>Useful links</h2>
+                            <ul>
+                                <li><a href="main.html">Home</a></li>
+                                <li><a href="prof.html">Profile</a></li>
+                                <li><a href="about.html">About us </a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-12 segment-three">
+                            <h2>Follow us on</h2>
+                            <p>Please follow us on our social media pages in order to keep updated.</p>
+                            <a href="#"><i class="fa fa-facebook faIcon"></i></a>
+                            <a href="#"><i class="fa fa-twitter faIcon"></i></a>
+                            <a href="#"><i class="fa fa-pinterest faIcon"></i></a>
+                            <a href="#"><i  class="fa fa-linkedin faIcon"></i></a>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-12 segment-four">
+                            <h2>Our Newsletter</h2>
+                            <form action="">
+                                <input type="email">
+                                <input type="submit" value="Subscribe">
+                            </form>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+{% endblock footer %}
+
+{% block container %}
+    <div class="slider">
+        <div class="slide-image">
+                <div class="img-container">
+                    <img class="img-resize" src="{{url_for('static',filename='sep.jpg')}}" alt="image">
+                </div>
+                <div class="img-container">
+                    <img class="img-resize" src="{{url_for('static',filename='tractor.jpg')}}" alt="image">
+                </div>
+                <div class="img-container">
+                    <img class="img-resize" src="{{url_for('static',filename='unnamed.jpg')}}" alt="img">
+                </div>
+                
+        </div>
+    </div>
+{% endblock container %}
